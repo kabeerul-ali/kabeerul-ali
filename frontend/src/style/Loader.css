@@ -1,0 +1,54 @@
+
+.app-loader {
+  width: 100%;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  min-height: 100vh;
+  background: #08090d;
+}
+
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.loader-ring {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  border: 3px solid rgba(167, 139, 250, 0.15);
+  border-top-color: #a78bfa;
+  border-radius: 50%;
+  animation: loaderSpin 0.8s linear infinite;
+}
+
+.loader-ring span {
+  position: absolute;
+  inset: 7px;
+  border: 2px solid transparent;
+  border-bottom-color: #67e8f9;
+  border-radius: 50%;
+  animation: loaderSpin 1.2s linear infinite reverse;
+}
+
+.loader-content p {
+  color: #a1a1aa;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+@keyframes loaderSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
