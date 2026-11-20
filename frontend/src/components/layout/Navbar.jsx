@@ -28,6 +28,11 @@ function Navbar() {
     {name:"Skills",path:"/skills"},
     { name: "Contact", path: "/contact" },
   ];
+  const whatsappMessage = encodeURIComponent(
+  "Good morning, Kabeerul! I visited your portfolio and would like to connect with you regarding an opportunity. Looking forward to hearing from you."
+);
+
+const whatsappUrl = `https://wa.me/91XXXXXXXXXX?text=${whatsappMessage}`;
 
   return (
     <header className="site-navbar">
@@ -71,9 +76,10 @@ function Navbar() {
           </Link>
         </nav>
 
-        <div className="navbar-actions">
+        <div className="navbar-actions" >
           <Link to="/contact" className="navbar-cta">
-            Let's Talk <ArrowUpRight size={17} />
+            Let's Talk <ArrowUpRight size={17} onClick={() => window.open(whatsappUrl, "_blank")}
+  style={{ cursor: "pointer" }}/>
           </Link>
 
           <button
