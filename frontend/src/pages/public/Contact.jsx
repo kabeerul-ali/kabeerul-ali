@@ -149,7 +149,7 @@ function Contact() {
             {profile?.phone && (
               <div
                 className="contact-detail-card"
-                onClick={() => (window.location.href = "tel:+91XXXXXXXXXX")}
+                onClick={() => (window.location.href = "tel:+919528536346")}
                 style={{ cursor: "pointer" }}
               >
                 <div className="contact-detail-icon">
