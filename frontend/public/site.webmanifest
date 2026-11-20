@@ -1,0 +1,12 @@
+
+{
+  "name": "Kabeerul Ali | Full Stack MERN Developer",
+  "short_name": "Kabeerul Ali",
+  "description": "Official portfolio of Kabeerul Ali, Full Stack MERN Developer and Web Developer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080b14",
+  "theme_color": "#080b14",
+  "orientation": "portrait-primary",
+  "icons": []
+}
