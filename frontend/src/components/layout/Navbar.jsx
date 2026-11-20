@@ -24,6 +24,8 @@ function Navbar() {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Projects", path: "/projects" },
+    //<NavLink to="/skills">Skills</NavLink>
+    {name:"Skills",path:"/skills"},
     { name: "Contact", path: "/contact" },
   ];
 

@@ -195,3 +195,7 @@ ul {
     transition-duration: 0.01ms !important;
   }
 }
+
+.home-hero{
+  background-color: rgba(52, 39, 41, 0.342);
+}

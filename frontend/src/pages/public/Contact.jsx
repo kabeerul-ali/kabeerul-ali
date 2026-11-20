@@ -1,19 +1,8 @@
-
 import { useState } from "react";
 
-import {
-  Mail,
-  Send,
-  MapPin,
-  CheckCircle2,
-  AlertCircle,
-} from "lucide-react";
+import { Mail, Send, MapPin, CheckCircle2, AlertCircle } from "lucide-react";
 
-import {
-  FaGithub,
-  FaLinkedin,
-  FaXTwitter,
-} from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 import { useProfile } from "../../context/ProfileContext";
 import { apiRequest } from "../../services/api";
@@ -116,20 +105,24 @@ function Contact() {
           <h1>
             Let's build something
             <br />
-            <span className="gradient-text">
-              meaningful together.
-            </span>
+            <span className="gradient-text">meaningful together.</span>
           </h1>
 
           <p>
-            Have a project idea, collaboration opportunity or just
-            want to connect? Send me a message.
+            Have a project idea, collaboration opportunity or just want to
+            connect? Send me a message.
           </p>
         </div>
 
         <div className="contact-layout">
           <div className="contact-details">
-            <div className="contact-detail-card">
+            <div
+              className="contact-detail-card"
+              onClick={() =>
+                (window.location.href = "mailto:kabeerulali@gmail.com")
+              }
+              style={{ cursor: "pointer" }}
+            >
               <div className="contact-detail-icon">
                 <Mail size={21} />
               </div>
@@ -154,7 +147,11 @@ function Contact() {
             </div>
 
             {profile?.phone && (
-              <div className="contact-detail-card">
+              <div
+                className="contact-detail-card"
+                onClick={() => (window.location.href = "tel:+91XXXXXXXXXX")}
+                style={{ cursor: "pointer" }}
+              >
                 <div className="contact-detail-icon">
                   <Mail size={21} />
                 </div>
@@ -191,10 +188,7 @@ function Contact() {
           <form className="contact-form" onSubmit={handleSubmit}>
             <h2>Send a message</h2>
 
-            <p>
-              Fill in the details below and let's start a
-              conversation.
-            </p>
+            <p>Fill in the details below and let's start a conversation.</p>
 
             <div className="contact-input-row">
               <div className="contact-field">
@@ -261,11 +255,7 @@ function Contact() {
               />
             </div>
 
-            <button
-              type="submit"
-              className="contact-submit"
-              disabled={loading}
-            >
+            <button type="submit" className="contact-submit" disabled={loading}>
               {loading ? "Sending..." : "Send Message"}
               <Send size={17} />
             </button>
